@@ -22,11 +22,24 @@
         // get the context
         const ctx = canvas.getContext("2d");
 
-        for (let i = 0; i <= canvas.width; i += 30) {
-            console.log(i);
-            ctx.fillRect(0, 0, 30, 30);
-            // nested for loop
-        }
+        // rotate the rectangles each time
+        ctx.save();
+
+        ctx.rotate(20 * Math.PI / 180);
+        ctx.fillRect(0, 30, 30, 30);
+        ctx.fillRect(30, 0, 30, 30);
+
+        ctx.restore();
+
+        ctx.fillRect(0, 130, 30, 30);
+        ctx.fillRect(130, 0, 30, 30);
+
+/*         for (let i = 0; i <= canvas.width; i += 60) {
+            ctx.rotate(1 * Math.PI / 180);
+
+            ctx.fillRect(i, 0, 30, 30);
+            ctx.fillRect(i, i, 30, 30);
+        } */
         
         // create a rectangle
 /*         ctx.fillRect(0, 0, 30, 30);
