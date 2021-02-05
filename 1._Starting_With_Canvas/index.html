@@ -22,8 +22,29 @@
         // get the context
         const ctx = canvas.getContext("2d");
 
+        let increment = 0;
+        setInterval(() => {
+            increment += 30;
+            ctx.fillRect(0, increment, 30, 30);
+            ctx.fillRect(increment, 0, 30, 30);
+            ctx.fillRect(increment, increment, 30, 30);
+        }, 500);
+        
+
+        // create a square of the dimensions 50 * 50 that is white with a red border
+/*         ctx.strokeStyle = "red";
+        ctx.rect(100, 100, 50, 50);
+        ctx.stroke();
+
+        ctx.strokeStyle = "crimson";
+        ctx.rect(400, 100, 50, 50);
+        ctx.stroke();
+
+        ctx.rect(700, 100, 50, 50);
+        ctx.stroke();
+ */
         // rotate the rectangles each time
-        ctx.save();
+/*         ctx.save();
 
         ctx.rotate(20 * Math.PI / 180);
         ctx.fillRect(0, 30, 30, 30);
@@ -32,7 +53,7 @@
         ctx.restore();
 
         ctx.fillRect(0, 130, 30, 30);
-        ctx.fillRect(130, 0, 30, 30);
+        ctx.fillRect(130, 0, 30, 30); */
 
 /*         for (let i = 0; i <= canvas.width; i += 60) {
             ctx.rotate(1 * Math.PI / 180);
