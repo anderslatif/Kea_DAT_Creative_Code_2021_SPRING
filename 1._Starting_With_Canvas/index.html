@@ -22,8 +22,14 @@
         // get the context
         const ctx = canvas.getContext("2d");
 
+        for (let i = 0; i <= canvas.width; i += 30) {
+            console.log(i);
+            ctx.fillRect(0, 0, 30, 30);
+            // nested for loop
+        }
+        
         // create a rectangle
-        ctx.fillRect(0, 0, 30, 30);
+/*         ctx.fillRect(0, 0, 30, 30);
 
         let increment = 0;
 
@@ -36,7 +42,7 @@
             ctx.fillStyle = "black";
             ctx.fillRect(0, increment, 30, 30);
             ctx.fillRect(increment, 0, 30, 30);
-        });
+        }); */
 
     </script>
 </body>
