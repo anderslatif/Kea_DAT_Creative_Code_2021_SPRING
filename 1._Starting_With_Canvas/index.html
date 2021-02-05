@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* No scroll bars */
+            overflow: hidden;
+        }
+    </style>
+    <title>Basics with Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" height="1000" width="1000"></canvas>
+
+    <script>
+        // access the canvas element so we can work with it
+        const canvas = document.getElementById("canvas");
+        // get the context
+        const ctx = canvas.getContext("2d");
+
+        // create a rectangle
+        ctx.fillRect(0, 0, 30, 30);
+
+        let increment = 0;
+
+        document.addEventListener("click", () => {
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            increment += 30;
+
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, increment, 30, 30);
+            ctx.fillRect(increment, 0, 30, 30);
+        });
+
+    </script>
+</body>
+</html>
