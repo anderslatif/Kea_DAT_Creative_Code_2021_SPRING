@@ -6,12 +6,9 @@ class EmptyBox extends Rectangle {
         this.width = width;
         this.height = height;
     }
-    draw(ctx) {
-        // define draw the empty box at x and y coordinates with width and height
-        // then call it in your game loop
-
+    draw(ctx, x, y) {
         ctx.beginPath();
-        ctx.rect(this.x, this.y, this.width, this.height);
+        ctx.rect(x || this.x, y || this.y, this.width, this.height);
         ctx.stroke();
     }
 }

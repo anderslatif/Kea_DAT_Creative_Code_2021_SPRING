@@ -12,10 +12,12 @@ let circleY;
 let firstBox;
 let boxX = 20;
 
+const util = new Util();
+
 function setup() {
     circleX = canvas.width / 1000;
     circleY = canvas.height / 1000;
-    firstBox = new EmptyBox(50, 50, 200, 300);
+    firstBox = new EmptyBox(50, 50, 5, 5);
     draw();
 }
 
@@ -30,30 +32,36 @@ function draw(now) {
         // do stuff
         update();
 
-        ctx.fillStyle = "lightblue";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        // ctx.fillStyle = "lightblue";
+        // ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-        circleX += 1;
+/*         circleX += 1;
         circleY += 1;
         
         ctx.fillStyle = "red";
         ctx.beginPath();
         ctx.arc(circleX, circleY, 50, 0, Math.PI*2);
-        ctx.fill();
+        ctx.fill(); */
 
-        ctx.drawImage(horseImage, 0, 0, canvas.width, canvas.height);
+        // ctx.drawImage(horseImage, 0, 0, canvas.width, canvas.height);
 
-        firstBox.draw(ctx);
+        const x = util.getRandom(0, canvas.width);
+        const y = util.getRandom(0, canvas.height);
+        firstBox.draw(ctx, x, y);
 
         // then the last step
         lastTime = now;
     }
 }
 
+// define a util function that gives a random hex color 
+// bonus task: Try to use it in firstBox
+
+
 function update() {
     // updating game logic here
-    boxX += 10;
-    firstBox.x = boxX;
+/*     boxX += 10;
+    firstBox.x = boxX; */
      
 }
 
