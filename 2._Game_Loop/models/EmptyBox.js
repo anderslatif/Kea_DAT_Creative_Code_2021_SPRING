@@ -6,7 +6,10 @@ class EmptyBox extends Rectangle {
         this.width = width;
         this.height = height;
     }
-    draw(ctx, x, y) {
+    draw(ctx, x, y, color) {
+        if (color) {
+            ctx.strokeStyle = color;
+        }
         ctx.beginPath();
         ctx.rect(x || this.x, y || this.y, this.width, this.height);
         ctx.stroke();

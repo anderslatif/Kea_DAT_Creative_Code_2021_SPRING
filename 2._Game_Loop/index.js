@@ -45,9 +45,12 @@ function draw(now) {
 
         // ctx.drawImage(horseImage, 0, 0, canvas.width, canvas.height);
 
-        const x = util.getRandom(0, canvas.width);
-        const y = util.getRandom(0, canvas.height);
-        firstBox.draw(ctx, x, y);
+        for (let i = 0; i < 100; i++) {
+            const x = util.getRandom(0, canvas.width);
+            const y = util.getRandom(0, canvas.height);
+            const randomColor = util.getRandomHexColor();
+            firstBox.draw(ctx, x, y, randomColor);
+        }
 
         // then the last step
         lastTime = now;
