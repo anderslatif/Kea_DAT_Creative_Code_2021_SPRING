@@ -17,6 +17,9 @@
             console.log(data);
         });
 
+        setInterval(() => {
+            socket.emit("helicopter mom socket", { message: "Are you okay?" })
+        }, 4000);
 
         window.addEventListener("mousemove", (event) => {
             socket.emit("client mouse moved", 

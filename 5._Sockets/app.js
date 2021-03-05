@@ -6,7 +6,11 @@ const io = require('socket.io')(server);
 io.on('connection', (socket) => { 
     socket.on("client mouse moved", (data) => {
         io.emit("server sends out the coordinates", data);
-    })
+    });
+
+    socket.on("helicopter mom socket", (data) => {
+        console.log(data.message);
+    });
 });
 
 // serve the html page through the server
