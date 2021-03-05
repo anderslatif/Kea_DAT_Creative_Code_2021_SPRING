@@ -40,7 +40,12 @@
 
         const mouse = Mouse.create(render.canvas);
         const mouseConstraint = MouseConstraint.create(engine, {
-            mouse
+            mouse,
+            constraint: {
+                render: {
+                    visible: false
+                }
+            }
         });
 
         World.add(engine.world, mouseConstraint);
