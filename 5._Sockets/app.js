@@ -4,7 +4,9 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
 io.on('connection', (socket) => { 
-    console.log("A socket joined");
+    socket.on("client mouse moved", (data) => {
+        console.log(data);
+    })
 });
 
 // serve the html page through the server
