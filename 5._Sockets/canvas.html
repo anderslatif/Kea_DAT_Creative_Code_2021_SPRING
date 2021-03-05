@@ -13,6 +13,11 @@
     <script>
         const socket = io();
 
+        socket.on("server sends out the coordinates", (data) => {
+            console.log(data);
+        });
+
+
         window.addEventListener("mousemove", (event) => {
             socket.emit("client mouse moved", 
                 { x: event.clientX, y: event.clientY });
