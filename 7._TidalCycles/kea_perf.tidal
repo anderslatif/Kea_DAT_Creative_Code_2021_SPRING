@@ -1,0 +1,17 @@
+do
+    d1
+        $ slow "<4 8>"
+        $ every 3 (juxBy 0.4 ((# delaytime 0.25) . (# delay 0.4)))
+        $ whenmod 3 2 (# note "<0 -12 -5>")
+        $ every 3 (jux ((# squiz 1.5) . (# gain 0.8)))
+        $ s "[ juno_wobble]"
+    d2
+        $ every 3 (slow 3)
+        $ slow 16
+        $ struct "t f t!2 t? f"
+        $ s "d_bd"
+        # lpf (segment 4 $ range 200 800 $ saw)
+        # size "<0.2 0.5>" # room 0.4
+
+
+
