@@ -6,13 +6,14 @@ Env([1,0,1],[1,1]).plot  //This makes an Envelope with three control points, at 
 // plot an envelop
 Env.perc(0.05,0.5,1.0,0).plot //arguments attackTime, releaseTime, level, curve: good for percussive hit envelopes
 
-Env.adsr(0.01, 0.5, 0.5, 0.1, 1.0, 0).plot  //attackTime, decayTime, sustainLevel, releaseTime, peakLevel, curve
+Env.adsr(0.1, 0.5, 0.5, 0.1, 1.0, 0).plot  //attackTime, decayTime, sustainLevel, releaseTime, peakLevel, curve
 //note that the sustain portion is not shown in time; this particular envelope type deals with variable hold times, and the hold is missed out in the plot
 
 
-// ############################# Mouse #############################
+// ####################### Mouse + Scope ##########################
 // ################################################################
 
+{SinOsc.ar(440, mul: -20.dbamp)}.scope
 
 // Simple mouse event on the X-axis
 {Dust.ar(MouseX.kr(1,100))}.play
@@ -29,6 +30,5 @@ Env.adsr(0.01, 0.5, 0.5, 0.1, 1.0, 0).plot  //attackTime, decayTime, sustainLeve
 }.scope
 )
 
-{SinOsc.ar(440, mul: -20.dbamp)}.scope
 
 

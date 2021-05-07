@@ -1,10 +1,10 @@
-##Best ressources in order:
+## Best ressources in order:
 
 https://composerprogrammer.com/teaching/supercollider/sctutorial/tutorial.html
 
 https://www.youtube.com/watch?v=yRzsOOiJ_p4&list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC
 
-##Potential supplements (Academic literature rather than always practical):
+## Potential supplements (Academic literature):
 
 https://ccrma.stanford.edu/~ruviaro/texts/A_Gentle_Introduction_To_SuperCollider.pdf
 
